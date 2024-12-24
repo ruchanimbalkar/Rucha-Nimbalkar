@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1' charset="utf-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>December 2024</title>
+</head>
+<body>
+
+    <h1> 2024 Christmas Calender </h1>
+  
+    <script>
+        const cellSize = 200;
+
+        for (let day =1; day <=24 ; day++){
+            const canvas = document.createElement("canvas")
+            canvas.width = cellSize;
+            canvas.height = cellSize;
+            document.body.appendChild(canvas);
+
+            fillCell(day,canvas);
+        }
+
+        function fillCell(index,canvas){
+            const ctx = canvas.getContext("2d");
+            const x = canvas.width/2;
+            const y = canvas.height/2;
+            //const itemSize = canvas.width * 0.6;
+
+         
+             var base_img = new Image();
+
+             // Set the source of the image
+             var ind_str = String(index)
+             var img_src = 'img/' + ind_str +'.PNG'
+             base_img.src = img_src;
+
+             //ctx.drawImage(img,x,y);  
+
+             base_img.onload = function(){
+                    //ctx.drawImage(base_img,0,0, x,y);
+                     ctx.drawImage(base_img,x,y,x,y);
+             }
+            //draw(ctx ,index,x,y,itemSize)
+
+           
+        }
+
+    </script>
+</body>
+</html>

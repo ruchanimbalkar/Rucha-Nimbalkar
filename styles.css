@@ -1,0 +1,28 @@
+﻿body
+{
+}
+
+canvas{
+    background-color : #98F5F9;
+    margin: 3px;
+    border-radius : 10px;
+}
+
+.emilys-candy-regular {
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1 {
+    font-family: 'Emilys Candy', serif;
+    color: #D20103;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 20px;
+    background-color: #E2EAF4;
+    border-radius: 10px;
+}
+
