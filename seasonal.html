@@ -1,55 +1,102 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1' charset="utf-8"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>December 2024</title>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name ="author" content="Rucha Nimbalkar">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+
+    <link href="https://fonts.googleapis.com/css?family=Emilys+Candy|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="mystyles.css" />
+    <link rel="icon" type="image/png" href="img/ruchanimbalkar.png">
+ 
+    <title> Rucha Nimbalkar</title>
 </head>
-<body>
+<body id = "main-container">
+        <header class="jumbotron">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col  col-sm-3  col-md-2">
+                        <img src="img/ruchanimbalkar.png" class="img-fluid" />
+                    </div>
+                    <div class="col-xs-12 col"> 
+                        <h1 class="text-green">Seasonal Greetings</h1>
+                                             
+                    </div>
+                </div>
 
-    <h1> 2024 Christmas Calender </h1>
-  
-    <script>
-        const cellSize = 200;
+               <div class="row">
+                 <div class="col-md-4 offset-md-4">
 
-        for (let day =1; day <=24 ; day++){
-            const canvas = document.createElement("canvas")
-            canvas.width = cellSize;
-            canvas.height = cellSize;
-            document.body.appendChild(canvas);
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+                          <a class="navbar-brand" href="#"></a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link disabled" href="#">CV</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Services</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                   
+                   </div>
+               </div>
+            </div>
+        </header>
+      
 
-            fillCell(day,canvas);
-        }
+        <div class="container">
+            <div class = "row row-content">
+                <div class="col">
+                    <picture>
+                        <img src="img/HNY.PNG" class="img-fluid img-thumbnail" alt="Happy New Year Card Picture">
+                     </picture>
+                </div>
+            </div>
+        </div>
 
-        function fillCell(index,canvas){
-            const ctx = canvas.getContext("2d");
-            const x = canvas.width/2;
-            const y = canvas.height/2;
-            //const itemSize = canvas.width * 0.6;
+        <footer class="py-5" id="footer">
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                         <h2>
+                              © Rucha Nimbalkar 2024 |
+                              <a href="https://www.linkedin.com/in/ruchanimbalkar" class="text-info">LinkedIn</a>
+                        
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+    
 
-         
-             var base_img = new Image();
+           <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+           <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+           <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      </div>
+    
 
-             // Set the source of the image
-             var ind_str = String(index)
-             var img_src = 'img/' + ind_str +'.png'
-             base_img.src = img_src;
-
-             //ctx.drawImage(img,x,y);  
-
-             base_img.onload = function(){
-                    //ctx.drawImage(base_img,0,0, x,y);
-                     ctx.drawImage(base_img,x,y,x,y);
-             }
-            //draw(ctx ,index,x,y,itemSize)
-
-           
-        }
-
-    </script>
 </body>
 </html>

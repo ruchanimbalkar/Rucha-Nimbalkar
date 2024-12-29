@@ -5,7 +5,7 @@
 }
 
 #main-container {
-    overflow: hidden;
+    overflow: auto;
 }
 .row-content{
     padding-bottom: 30px;
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 footer{
-    
+    position:static;
     background-image: linear-gradient(#7DDA58, #45A51F);
     padding: 10px 0px;
     
