@@ -1,2 +1,2 @@
 # Rucha-Nimbalkar
-This is my official site code
+Hi, My name is Rucha Nimbalkar. I am a front end developer.
